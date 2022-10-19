@@ -1,0 +1,232 @@
+/* --------- ОБНУЛЕННЯ СТИЛІВ ТЕГІВ ------------ */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   border: none;
+   box-sizing: border-box;
+}
+
+li {
+   list-style: none;
+}
+
+a {
+   color: inherit;
+}
+
+a:link,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+
+input,
+button,
+textarea {
+   font-family: inherit;
+   font-size: inherit;
+}
+
+button {
+   cursor: pointer;
+   color: inherit;
+   background-color: inherit;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+[class*="__container"] {
+   max-width: 1230px;
+   margin: 0 auto;
+}
+
+/*-----------------Шрифты-------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Lato:regular,700,900&display=swap');
+
+@font-face {
+   font-family: "Gilroy";
+   src: url("../fonts/Gilroy-LightItalic.woff2") format("woff2"), url("../fonts/Gilroy-LightItalic.woff") format("woff");
+   font-display: swap;
+   font-weight: 300;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: "Gilroy";
+   src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+   font-display: swap;
+   font-weight: 500;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Gilroy";
+   src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+   font-display: swap;
+   font-weight: 700;
+   font-style: normal;
+}
+
+/*------------------------------------------------*/
+body {
+   font-family: 'lato';
+   font-style: normal;
+   font-weight: 400;
+}
+
+.blocks {
+   padding: 20px;
+}
+
+.blocks__body {}
+
+.blocks__container {}
+
+.blocks__example {
+   margin: 0px auto;
+}
+
+.example-first,
+.example-second,
+.example-third,
+.example-four,
+.example-five {
+   width: 150px;
+   height: 150px;
+   background-color: rgb(0, 7, 70);
+   margin-top: 15px;
+}
+
+.example-first__item,
+.example-second__item,
+.example-third__item,
+.example-four__item,
+.example-five__item {
+   width: 150px;
+   height: 150px;
+   background-color: rgb(255, 208, 0);
+   transition: all 0.5s ease;
+}
+
+.example-first__item p,
+.example-second__item p,
+.example-third__item p,
+.example-four__item p,
+.example-five__item p {
+   text-align: center;
+   font-size: 18px;
+   text-transform: uppercase;
+   padding-top: 70px;
+}
+
+.example-first {
+   background-color: #000;
+}
+
+.example-first:hover .example-first__item {
+   transform: rotate(180deg);
+}
+
+.example-second {
+   perspective: 150px;
+   background-color: #000;
+}
+
+.example-second:hover .example-second__item {
+   transform: rotateX(70deg);
+}
+
+.example-third {
+   background-color: #000;
+}
+
+.example-third:hover .example-third__item {
+   transform: skew(10deg, 30deg);
+}
+
+.example-four {
+   background-color: #000;
+}
+
+.example-four:hover .example-four__item {
+   transform: scale(3);
+}
+
+.example-five {
+   background-color: #000;
+}
+
+.example-five:hover .example-five__item {
+   transform: translate(30px, 60px);
+}
+
+/*--------------------------------------------------------*/
+
+.playing-card {}
+
+.playing-card__body {
+   margin-top: 100px;
+   height: 300px;
+}
+
+.playing-card__container {}
+
+.playing-card__cards {}
+
+.cards {}
+
+.cards__front {}
+
+.cards__back {}
+
+.cards__front img,
+.cards__back img {
+   position: relative;
+   float: left;
+}
+
+.cards:hover .cards__front {
+   transform: rotateY(180deg);
+}
+
+.cards:hover .cards__back {
+   transform: rotateY(0deg);
+}
+
+.cards .cards__back {
+   transform: rotateY(-180deg);
+}
+
+.cards .cards__front,
+.cards .cards__back {
+   display: inline;
+   position: absolute;
+   box-sizing: border-box;
+   transition: all 0.5s ease-in;
+   color: white;
+   background-color: #fff;
+   padding: 10px;
+   backface-visibility: hidden;
+}
